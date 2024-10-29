@@ -5,6 +5,7 @@ import org.springframework.stereotype.Repository;
 import personal.cyy.playground.common.utils.MybatisUtils;
 import personal.cyy.playground.domain.entity.AuthorEntity;
 import personal.cyy.playground.mapper.AuthorMapper;
+import java.util.List;
 
 @Repository
 public class AuthorDAO {
@@ -20,4 +21,9 @@ public class AuthorDAO {
     public AuthorEntity getAuthor(Integer id) {
         return authorMapper.selectAuthor(id);
     }
+
+    public List<AuthorEntity> getAllAuthors(List<Integer> ids) {
+        return authorMapper.selectAllAuthors(ids);
+    }
+
 }

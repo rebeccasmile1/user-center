@@ -6,4 +6,11 @@
     <select id="selectAuthor" resultType="personal.cyy.playground.domain.entity.AuthorEntity">
         select * from author where id = #{id}
     </select>
+
+    <select id="selectAllAuthors" resultType="personal.cyy.playground.domain.entity.AuthorEntity">
+        select * from author where id in
+        <foreach collection="ids" item="item" separator="," open="(" close=")">
+            #{item}
+        </foreach>
+    </select>
 </mapper>

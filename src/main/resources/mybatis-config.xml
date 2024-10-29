@@ -7,6 +7,10 @@
 
     </properties>
 
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
@@ -23,5 +27,7 @@
     <mappers>
         <mapper resource="mappers/MybatisMapper.xml"/>
     </mappers>
+
+
 
 </configuration>
